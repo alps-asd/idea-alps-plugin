@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.alps-asd.idea-alps-plugin</id>
-    <name>ALPS State Diagram</name>
+    <name>app-state-diagram</name>
     <vendor url="https://github.com/alps-asd">alps-asd</vendor>
 
     <description><![CDATA[

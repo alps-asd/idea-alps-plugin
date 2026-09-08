@@ -1,4 +1,4 @@
-# ALPS State Diagram — PhpStorm Plugin
+# app-state-diagram — PhpStorm Plugin
 
 Renders an [ALPS](https://alps-io.github.io/) profile (`alps.json` / `alps.xml`) as a
 live state-diagram preview inside PhpStorm, split next to the text editor —
