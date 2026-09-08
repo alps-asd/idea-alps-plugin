@@ -3,8 +3,8 @@
 ## 0.1.1
 
 - Rename the plugin display name to `app-state-diagram`, matching the
-  upstream project name used elsewhere (npm package, GitHub org, CLI binary).
-  No change to the plugin id or vendor.
+  upstream project and package name (`@alps-asd/app-state-diagram`). No
+  change to the plugin id or vendor.
 
 ## 0.1.0
 
