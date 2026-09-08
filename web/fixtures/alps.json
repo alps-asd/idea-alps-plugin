@@ -1,0 +1,30 @@
+{
+  "$schema": "https://alps-io.github.io/schemas/alps.json",
+  "alps": {
+    "title": "ALPS Blog",
+    "doc": { "value": "An ALPS profile example for asd smoke-testing" },
+    "descriptor": [
+      { "id": "id", "type": "semantic", "def": "https://schema.org/identifier" },
+      { "id": "articleBody", "type": "semantic", "def": "https://schema.org/articleBody" },
+
+      { "id": "About", "type": "semantic", "descriptor": [
+        { "href": "#goBlog" }
+      ]},
+      { "id": "Blog", "type": "semantic", "def": "https://schema.org/Blog", "title": "Blog post list", "rel": "collection", "descriptor": [
+        { "href": "#BlogPosting" },
+        { "href": "#goBlogPosting" },
+        { "href": "#goAbout" }
+      ]},
+      { "id": "BlogPosting", "type": "semantic", "title": "Blog post item", "def": "https://schema.org/BlogPosting", "descriptor": [
+        { "href": "#id" },
+        { "href": "#articleBody" },
+        { "href": "#goBlog" }
+      ]},
+
+      { "id": "goStart", "type": "safe", "rt": "#Blog" },
+      { "id": "goAbout", "type": "safe", "rt": "#About", "rel": "about" },
+      { "id": "goBlog", "type": "safe", "rt": "#Blog", "rel": "collection" },
+      { "id": "goBlogPosting", "type": "safe", "rt": "#BlogPosting", "rel": "item" }
+    ]
+  }
+}

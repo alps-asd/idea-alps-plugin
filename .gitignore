@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ Platform Gradle Plugin
+.intellijPlatform/
+.qodana/
+
+# Kotlin
+.kotlin/
+
+# IDE
+.idea/
+*.iml
+out/
+
+# Node (web/)
+web/node_modules/
+
+# Generated preview bundle (built from web/, not hand-edited)
+src/main/resources/web/asd.bundle.js
+src/main/resources/web/index.html
+
+# OS
+.DS_Store

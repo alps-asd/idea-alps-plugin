@@ -1,0 +1,21 @@
+<idea-plugin>
+    <id>com.koriym.alps.idea-alps-plugin</id>
+    <name>ALPS State Diagram</name>
+    <vendor url="https://github.com/koriym">Akihito Koriyama</vendor>
+
+    <description><![CDATA[
+        Renders an ALPS profile (alps.json / alps.xml) as a state diagram
+        preview, powered by app-state-diagram's parser and dot generator.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <!-- JCEF was split out of the core platform into its own bundled plugin in
+         2026.2; without this the com.intellij.ui.jcef.* classes are not on the
+         plugin classloader (NoClassDefFoundError at runtime). The alias exists
+         since 2025.3.1; it does not exist before that. -->
+    <depends>com.intellij.modules.jcef</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileEditorProvider implementation="com.koriym.alps.idea.AlpsFileEditorProvider"/>
+    </extensions>
+</idea-plugin>

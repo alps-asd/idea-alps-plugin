@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #fff; }
+  #output { width: 100%; height: 100%; overflow: auto; }
+  #output svg { width: 100%; height: auto; }
+  #error { color: #b00020; font-family: monospace; white-space: pre-wrap; padding: 8px; }
+</style>
+</head>
+<body>
+<div id="output"></div>
+<div id="error"></div>
+<script src="asd.bundle.js"></script>
+<script>
+  // window.__onNodeClick is (re)installed by the plugin after each page load
+  // via a JBCefJSQuery bridge; default to a no-op until then.
+  window.__onNodeClick = window.__onNodeClick || function () {};
+
+  document.addEventListener('click', function (event) {
+    var anchor = event.target.closest('a');
+    if (!anchor) return;
+    var href = anchor.getAttribute('xlink:href') || anchor.getAttribute('href');
+    if (!href || href.charAt(0) !== '#') return;
+    event.preventDefault();
+    window.__onNodeClick(href.substring(1));
+  });
+
+  // Invoked by the plugin (via executeJavaScript) on every debounced edit.
+  window.__applyRender = async function (text, labelMode) {
+    var out = document.getElementById('output');
+    var err = document.getElementById('error');
+    try {
+      var result = await window.asd.render(text, labelMode || 'id');
+      if (result.error) {
+        err.textContent = result.error;
+        return;
+      }
+      err.textContent = '';
+      out.innerHTML = result.svg;
+    } catch (e) {
+      err.textContent = String(e);
+    }
+  };
+</script>
+</body>
+</html>
