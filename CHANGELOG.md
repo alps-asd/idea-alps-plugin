@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.1
+
+No functional changes from 0.1.0. Marketplace rejected re-upload of 0.1.0
+under this plugin id (already registered), so this republishes the same
+build under the next version number.
+
 ## 0.1.0
 
 First release.
