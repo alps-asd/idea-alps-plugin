@@ -2,9 +2,9 @@
 
 ## 0.1.1
 
-No functional changes from 0.1.0. Marketplace rejected re-upload of 0.1.0
-under this plugin id (already registered), so this republishes the same
-build under the next version number.
+- Rename the plugin display name to `app-state-diagram`, matching the
+  upstream project name used elsewhere (npm package, GitHub org, CLI binary).
+  No change to the plugin id or vendor.
 
 ## 0.1.0
 
