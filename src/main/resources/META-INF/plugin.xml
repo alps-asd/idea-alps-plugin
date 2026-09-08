@@ -1,7 +1,7 @@
 <idea-plugin>
-    <id>com.koriym.alps.idea-alps-plugin</id>
+    <id>com.alps-asd.idea-alps-plugin</id>
     <name>ALPS State Diagram</name>
-    <vendor url="https://github.com/koriym">Akihito Koriyama</vendor>
+    <vendor url="https://github.com/alps-asd">alps-asd</vendor>
 
     <description><![CDATA[
         Renders an ALPS profile (alps.json / alps.xml) as a state diagram
